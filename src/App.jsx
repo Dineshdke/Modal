@@ -45,6 +45,7 @@ function App() {
       <h2>User Details Modal</h2>
       <button className='button' onClick={handleOpen} >Open Form</button>
       {click ? (
+        <div className='modal'>
               <form onChange={handleChange} onSubmit={handleSubmit} className='modal-content'>
                 <div className='title'>Fill Details</div>
                 <div className='title'>Username:</div>
@@ -57,6 +58,7 @@ function App() {
                 <input type='date' name='date' id='dob' required/>   
                 <button className='submit-button'>Submit</button>
             </form>
+        </div>
       ):''}
 
     </div>
