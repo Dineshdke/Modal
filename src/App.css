@@ -1,0 +1,41 @@
+.modal-content{
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  border-style: solid;
+  border-color: black;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 30vw;
+  background-color: white;
+}
+
+.title{
+  color: black;
+  font-weight: bold;
+}
+
+.clicked{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:rgb(139, 137, 137)
+}
+
+.notclicked{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.button{
+  background-color: rgb(88, 206, 238);
+  border-color: aliceblue;
+  padding: 0.5rem;
+}
