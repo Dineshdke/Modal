@@ -1,15 +1,9 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
   const [data, setData] = useState({});
   const [click,setClick] = useState(false);
- 
-  function handleOpen(){
-    setClick(!click);
-  }
 
   function handleChange(e){
     setData({...data,[e.target.name]:e.target.value});
@@ -35,15 +29,24 @@ function App() {
     }
     else{
       setClick(false);
-    }
+    }    
+  }
 
+  function handleException(e){
+    if(e.target.className == 'button'){
+      console.log('Button clicked')
+      setClick(true);
+    }
+    else{
+      setClick(false);
+    }
     
   }
 
   return (
-    <div className={click ? 'clicked' :'notclicked'}>
+    <div className={click ? 'clicked' :'notclicked'} onClick={handleException}>
       <h2>User Details Modal</h2>
-      <button className='button' onClick={handleOpen} >Open Form</button>
+      <button className='button'>Open Form</button>
       {click ? (
         <div className='modal'>
               <form onChange={handleChange} onSubmit={handleSubmit} className='modal-content'>
