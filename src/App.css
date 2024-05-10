@@ -39,3 +39,8 @@
   border-color: aliceblue;
   padding: 0.5rem;
 }
+
+.modal{
+  position: absolute;
+  margin-top: 20vh;
+}
